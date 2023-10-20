@@ -3,7 +3,6 @@
  */
 
 #include "sort.h"
-void swap_ints(int *a, int *b);
 
 /**
  * swap_ints - Swap two integers in an array.
