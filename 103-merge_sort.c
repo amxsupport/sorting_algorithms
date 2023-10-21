@@ -51,7 +51,15 @@ void merge_subarr(int *subarr, int *buff, size_t front, size_t mid,
  */
 void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back)
 {
-  /* implementation */
+	size_t mid;
+
+	if (back - front > 1)
+	{
+		mid = front + (back - front) / 2;
+		merge_sort_recursive(subarr, buff, front, mid);
+		merge_sort_recursive(subarr, buff, mid, back);
+		merge_subarr(subarr, buff, front, mid, back);
+	}
 }
 
 /**
